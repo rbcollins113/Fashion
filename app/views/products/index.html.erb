@@ -1,41 +1,4 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Products</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Price</th>
-      <th>Discount</th>
-      <th>Quick</th>
-      <th>Quantity</th>
-      <th>Description</th>
-      <th>Information</th>
-      <th>Reviews</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.title %></td>
-        <td><%= product.price %></td>
-        <td><%= product.discount %></td>
-        <td><%= product.quick %></td>
-        <td><%= product.quantity %></td>
-        <td><%= product.description %></td>
-        <td><%= product.information %></td>
-        <td><%= product.reviews %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<%= render "common/fashion"%>
 
 <%= link_to 'New Product', new_product_path %>
