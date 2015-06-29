@@ -1,0 +1,19 @@
+<div class="b-link-stroke b-animate-go  thickbox">
+    <img src=<%=image_path("p1.jpg")%> class="img-responsive" alt=""/>
+</div>
+<div class="grid_2">
+    <% @products.each_with_index do |x, index|%>
+    	<% if index == @products.length - 2 %>
+    		<p><%= x.title %></p>
+    	<% end %>
+    <% end %>
+    <ul class="grid_2-bottom">
+    	<% @products.each_with_index do |x, index|%>
+    		<% if index == @products.length - 2 %>
+    			<li class="grid_2-left"><p><%= x.price%></p></li>
+    			<li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
+    		<% end %>
+    	<% end %>
+    	<div class="clearfix"> </div>
+    </ul>    				
+</div>
