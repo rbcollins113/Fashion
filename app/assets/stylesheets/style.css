@@ -1989,3 +1989,7 @@ ul.about_box li.box_desc {
 	font: 300 90px/90px Lato, sans-serif;
 }
 }
+
+div.col-md-4.top_grid1-box1{
+	padding-top: 30px;
+}
