@@ -6,6 +6,8 @@ class CategoriesController < ApplicationController
 	def show
 		@category = Category.find params[:id]
     	redirect_to root_path and return if @category.nil?
-    	@products = Product.by_category(@category).sort_by_name
+    	#@products = Product.by_category(@category).sort_by_name
+
+    	@products = Product.where("category_id = ?", params[:id])
 	end
 end
