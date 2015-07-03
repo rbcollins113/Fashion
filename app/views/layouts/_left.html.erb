@@ -1,31 +1,14 @@
 <div class="sidebar">
-			<div class="menu_box">
-		    <h3 class="menu_head">SẢN PHẨM </h3>
-			  <ul class="menu">
-			  	<% @all_categories.each do |category| %>
-				<li class="item1"><a href="#"><img class="arrow-img" src=<%=image_path("f_menu.png")%> alt=""/><%= category.title %></a>
+	<div class="menu_box">
+		<h3 class="menu_head">SẢN PHẨM </h3>
+		<ul class="menu">
+			<% @all_categories.each do |category| %>
+				<li class="item1">
+					<a href=<%= category_path(category)%>>
+						<img class="arrow-img" src=<%=image_path("f_menu.png")%> alt=""/><%= category.title %>
+					</a>
 				</li>
-				<% end %>
-			</ul>
-		</div>
-				<!--initiate accordion-->
-		<script type="text/javascript">
-			$(function() {
-			    var menu_ul = $('.menu > li > ul'),
-			           menu_a  = $('.menu > li > a');
-			    menu_ul.hide();
-			    menu_a.click(function(e) {
-			        e.preventDefault();
-			        if(!$(this).hasClass('active')) {
-			            menu_a.removeClass('active');
-			            menu_ul.filter(':visible').slideUp('normal');
-			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
-			        } else {
-			            $(this).removeClass('active');
-			            $(this).next().stop(true,true).slideUp('normal');
-			        }
-			    });
-			
-			});
-		</script>
-       </div>
+			<% end %>
+		</ul>
+	</div>
+</div>
