@@ -10,6 +10,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @category = Category.find params[:id]
+    @products = Product.where("category_id = ?", params[:id]).limit(6)
   end
 
   # GET /products/new
