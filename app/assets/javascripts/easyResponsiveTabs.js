@@ -1,6 +1,6 @@
 // Easy Responsive Tabs Plugin
 // Author: Samson.Onna <Email : samson3d@gmail.com>
-jQuery(function ($) {
+(function ($) {
     $.fn.extend({
         easyResponsiveTabs: function (options) {
             //Set the default values, use comma to separate the settings, example:
@@ -108,4 +108,3 @@ jQuery(function ($) {
         }
     });
 })(jQuery);
-
