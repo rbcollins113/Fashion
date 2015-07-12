@@ -1,25 +1,5 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Fashionpress an E-Commerce online Shopping Category Flat Bootstarp responsive Website Template| Single :: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Fashionpress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-<link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= csrf_meta_tags %>
-<script type="application/x-javascript"> 
-  addEventListener("load", function() { 
-    setTimeout(hideURLbar, 0); }, false); 
-      function hideURLbar(){ 
-        window.scrollTo(0,1); 
-    } </script>
-
-<script>
+    <script>
       jQuery(document).ready(function($){
-
         $('#etalage').etalage({
           thumb_image_width: 300,
           thumb_image_height: 400,
@@ -30,50 +10,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
           }
         });
-
       });
     </script>
-    
-        <script type="text/javascript">
-          $(document).ready(function () {
-              $('#horizontalTab').easyResponsiveTabs({
-                  type: 'default', //Types: default, vertical, accordion           
-                  width: 'auto', //auto or any width like 600px
-                  fit: true   // 100% fit in a container
-              });
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $('#horizontalTab').easyResponsiveTabs({
+              type: 'default', //Types: default, vertical, accordion           
+              width: 'auto', //auto or any width like 600px
+              fit: true   // 100% fit in a container
           });
-            </script> 
+      });
+    </script> 
 
-</head>
-<body>
 <div class="main">
   <div class="content_top">
     <div class="container">
      <div class="col-md-3 sidebar_box">
        <div class="sidebar">
-      <div class="menu_box">
-        <%= render "layouts/left"%>
-      </div>
-        <!--initiate accordion-->
-    <script type="text/javascript">
-      $(function() {
-          var menu_ul = $('.menu > li > ul'),
-                 menu_a  = $('.menu > li > a');
-          menu_ul.hide();
-          menu_a.click(function(e) {
-              e.preventDefault();
-              if(!$(this).hasClass('active')) {
-                  menu_a.removeClass('active');
-                  menu_ul.filter(':visible').slideUp('normal');
-                  $(this).addClass('active').next().stop(true,true).slideDown('normal');
-              } else {
-                  $(this).removeClass('active');
-                  $(this).next().stop(true,true).slideUp('normal');
-              }
-          });
-      
-      });
-    </script>
+        <div class="menu_box">
+          <%= render "layouts/left"%>
+        </div>
        </div>
         <%= render "layouts/leftbot"%>
      </div> 
@@ -171,6 +127,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
        </a></div>
       </div>
-      <% end %> 
+    <% end %> 
   </div>
 </div>
